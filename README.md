@@ -1,0 +1,1 @@
+# kuromoji-js-new-words
