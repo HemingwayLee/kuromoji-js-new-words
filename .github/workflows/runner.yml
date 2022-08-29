@@ -16,4 +16,12 @@ jobs:
         run: docker build -t mykuromoji .
       - name: Run Dockerfile with node
         run: docker run mykuromoji /bin/bash -c 'node /home/app/tryme.js'
-
+      - name: Copy .gz files
+        run: |
+          docker create -ti --name dummy mykuromoji /bin/bash
+          docker cp dummy:/home/lib/kuromoji.js/dict/ .
+          docker rm -f dummy
+      - name: Check artifacts
+        run: |
+          ls
+          pwd
