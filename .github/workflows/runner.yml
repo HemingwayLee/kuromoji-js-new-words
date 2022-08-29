@@ -29,7 +29,3 @@ jobs:
           cd ..
           zip -r dict.zip dict
           ls
-      # - uses: actions/upload-artifact@v3
-      #   with:
-      #     name: react-electron-app.app
-      #     path: /Users/runner/work/electron-react-template/electron-react-template/dist/mac/react-electron-app.app
