@@ -21,7 +21,15 @@ jobs:
           docker create -ti --name dummy mykuromoji /bin/bash
           docker cp dummy:/home/lib/kuromoji.js/dict/ .
           docker rm -f dummy
-      - name: Check artifacts
+      - name: zip artifacts
         run: |
+          cd dict
           ls
           pwd
+          cd ..
+          zip -r dict.zip dict
+          ls
+      # - uses: actions/upload-artifact@v3
+      #   with:
+      #     name: react-electron-app.app
+      #     path: /Users/runner/work/electron-react-template/electron-react-template/dist/mac/react-electron-app.app
