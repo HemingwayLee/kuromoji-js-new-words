@@ -17,6 +17,7 @@ RUN mkdir -p /home/app/
 RUN cp /home/lib/tryme.js /home/app/
 WORKDIR /home/app/
 RUN npm install kuromoji
+RUN npm install punycode
 RUN node tryme.js
 
 
