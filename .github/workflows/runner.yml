@@ -31,5 +31,5 @@ jobs:
           ls
       - uses: actions/upload-artifact@v3
         with:
-          name: react-electron-app.app
+          name: dict.zip
           path: /home/runner/work/kuromoji-js-new-words/kuromoji-js-new-words/dict.zip
