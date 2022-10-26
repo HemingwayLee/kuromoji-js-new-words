@@ -8,3 +8,18 @@
 docker build -t mykuromoji .
 ```
 
+* Test with `tryme.js` to see if the words added into dictionary or not
+```
+docker run mykuromoji /bin/bash -c 'node /home/app/tryme.js'
+```
+
+* Get dictionary files from docker images
+```
+docker create -ti --name dummy mykuromoji /bin/bash
+docker cp dummy:/home/lib/kuromoji.js/dict/ .
+docker rm -f dummy
+```
+
+## Reference
+* You can look at [github action](https://github.com/HemingwayLee/kuromoji-js-new-words/blob/main/.github/workflows/runner.yml) for more information
+
