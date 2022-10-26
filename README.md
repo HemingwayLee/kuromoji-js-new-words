@@ -3,7 +3,7 @@
 
 ## How to run
 * Put the words you want to add into `myname.csv`
-* Build this docker image because kuromoji.js only works in node v11
+* Build this docker image because kuromoji.js works in older version of nodejs (e.g., node:11)
 ```
 docker build -t mykuromoji .
 ```
