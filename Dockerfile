@@ -10,6 +10,7 @@ RUN git clone https://github.com/takuyaa/kuromoji.js.git
 WORKDIR /home/lib/kuromoji.js/
 RUN rm package-lock.json
 RUN npm install .
+RUN cp -R /home/lib/kuromoji.js/dict /home/lib/kuromoji.js/dict_ori 
 RUN cp /home/lib/myname.csv /home/lib/kuromoji.js/node_modules/mecab-ipadic-seed/lib/dict/
 RUN npm run build-dict
 
