@@ -84,4 +84,5 @@ docker rm -f dummy
 
 ## Reference
 * You can look at [github action](https://github.com/HemingwayLee/kuromoji-js-new-words/blob/main/.github/workflows/runner.yml) for more information
+* [kuromoji.jsの辞書に単語を追加する](https://qiita.com/muraken720/items/dc67c8dc32138be7b3f8)
 
